@@ -1,0 +1,58 @@
+{
+  "name": "gologs-graphql-server",
+  "version": "0.1.0",
+  "description": "GraphQL server for Go-Logs microservices.",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc --build",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "postinstall": "bash install.sh",
+    "rebuild": "npm run build -- --force",
+    "start": "ts-node-dev src/index.ts",
+    "start:prod": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gologs",
+    "graphql",
+    "gateway"
+  ],
+  "author": "IqbalN",
+  "license": "",
+  "dependencies": {
+    "@apollo/gateway": "^0.21.0",
+    "apollo-datasource-rest": "^0.9.4",
+    "apollo-server": "^2.18.2",
+    "dotenv": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.0",
+    "typedi": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "2.1.2",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

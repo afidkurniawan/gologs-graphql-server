@@ -1,0 +1,22 @@
+{
+  "name": "gologs-graphql-server-customers",
+  "private": true,
+  "main": "../../dist/index.js",
+  "types": "../../dist/index.d.ts",
+  "author": "IqbalN",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.9.4",
+    "apollo-server": "^2.18.2",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.3.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.0",
+    "typedi": "^0.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {
+    "class-validator": "^0.12.2"
+  }
+}
