@@ -3,6 +3,7 @@ import { config } from "dotenv";
 config();
 const port = process.env.PORT;
 const customerPort = process.env.CUSTOMERS_PORT;
+const beacukaiPort = process.env.BEACUKAI_PORT;
 
 export default {
   app: {
@@ -16,6 +17,11 @@ export default {
       name: "customers",
       apiUrl: process.env.CUSTOMERS_API_URL,
       port: (customerPort as unknown) as number
+    },
+    beacukai:{
+      name: "beacukai",
+      apiUrl: process.env.BEACUKAI_API_URL,
+      port: (beacukaiPort as unknown) as number,
     }
   }
 };
