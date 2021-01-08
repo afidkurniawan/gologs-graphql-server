@@ -16,9 +16,7 @@ export default class CompanyResolver {
   }
 
   @Query(() => Company)
-  async company(
-    @Arg("id", () => ID)id: number
-  ): Promise<Company> {
+  async company(@Arg("id", () => ID) id: number): Promise<Company> {
     return this.customerApi.getCompany(id);
   }
 

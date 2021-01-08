@@ -3,24 +3,24 @@ import Container from "./Container";
 
 @ObjectType()
 export default class Cargo {
-    @Field(() => ID)
-    blNumber: string;
+  @Field(() => ID, { nullable: true })
+  blNumber?: string;
 
-    @Field()
-    portOfDischarge: string;
-    
-    @Field()
-    portOfLoading: string;
-    
-    @Field()
-    shippingDate: string;
+  @Field({ nullable: true })
+  portOfDischarge?: string;
 
-    @Field()
-    vesselName: string;
+  @Field({ nullable: true })
+  portOfLoading?: string;
 
-    @Field()
-    voyageNumber: string;
+  @Field({ nullable: true })
+  shippingDate?: string;
 
-    @Field(() => [Container])
-    contaier: [Container];
+  @Field({ nullable: true })
+  vesselName?: string;
+
+  @Field({ nullable: true })
+  voyageNumber?: string;
+
+  @Field(() => [Container], { nullable: true })
+  contaier?: [Container];
 }

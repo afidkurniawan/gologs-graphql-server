@@ -18,10 +18,10 @@ export default {
       apiUrl: process.env.CUSTOMERS_API_URL,
       port: (customerPort as unknown) as number
     },
-    beacukai:{
+    beacukai: {
       name: "beacukai",
       apiUrl: process.env.BEACUKAI_API_URL,
-      port: (beacukaiPort as unknown) as number,
+      port: (beacukaiPort as unknown) as number
     }
   }
 };
