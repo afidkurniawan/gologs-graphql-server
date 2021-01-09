@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+/* naming convention disable, caused by external service */
 import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()

@@ -1,19 +1,21 @@
+/* eslint-disable camelcase */
+/* naming convention disable, caused by external service */
 import { Arg, ID, Query, Resolver } from "type-graphql";
 import { Service } from "typedi";
-import BeacukaiApi from "../beacukaiApi";
-
-import Container from "../models/Container";
+import BeacukaiApi from "../beacukai";
+import Bc_Container from "../models/Bc_Container";
 
 @Service()
-@Resolver(Container)
+@Resolver(Bc_Container)
 export default class ContainerResolver {
   constructor(private beacukaiApi: BeacukaiApi) {}
 
-  @Query(() => [Container])
-  async container(
+  @Query(() => [Bc_Container])
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  async bc_containers(
     @Arg("blNumber", () => ID) blNumber: string,
     @Arg("blDate") blDate: string
-  ): Promise<Container[]> {
-    return this.beacukaiApi.getContainer(blNumber, blDate);
+  ): Promise<Bc_Container[]> {
+    return this.beacukaiApi.getContainers(blNumber, blDate);
   }
 }
