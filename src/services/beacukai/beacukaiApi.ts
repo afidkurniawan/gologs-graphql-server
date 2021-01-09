@@ -13,7 +13,7 @@ export default class BeacukaiApi extends RESTDataSource {
 
   async getContainer(blNumber: string, blDate: string): Promise<Container[]> {
     const result = await super.get(`
-    ${config.services.beacukai.pathPerfix}/${blNumber}/${blDate}`);
+    ${config.services.beacukai.containerPath}/${blNumber}/${blDate}`);
     const key = Object.keys(result)[0];
     return result[key];
   }
