@@ -3,6 +3,7 @@ import { ApolloServer } from "apollo-server";
 import { ApolloGateway, GatewayConfig } from "@apollo/gateway";
 
 import customersService from "./services/customers";
+import beacukaiService from "./services/beacukai";
 
 import config from "./config";
 
@@ -13,6 +14,10 @@ async function main() {
       {
         name: "customers",
         url: await customersService(config.services.customers.port)
+      },
+      {
+        name: "beacukai",
+        url: await beacukaiService(config.services.beacukai.port)
       }
     ]
   };

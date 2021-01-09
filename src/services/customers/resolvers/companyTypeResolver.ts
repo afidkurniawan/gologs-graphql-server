@@ -15,9 +15,7 @@ export default class CompanyTypeResolver {
   }
 
   @Query(() => CompanyType)
-  async companyType(
-    @Arg("id", () => ID) id: number
-  ): Promise<CompanyType> {
+  async companyType(@Arg("id", () => ID) id: number): Promise<CompanyType> {
     return this.customerApi.getCompanyType(id);
   }
 
