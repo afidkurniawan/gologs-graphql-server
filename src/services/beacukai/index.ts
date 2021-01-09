@@ -2,15 +2,17 @@ import { ApolloServer } from "apollo-server";
 import { Container } from "typedi";
 
 import buildFederatedSchema from "../../helpers/buildFederatedSchema";
-import Cargo from "./models/Cargo";
+import mContainer from "./models/Container";
+import ContainerResolver from "./resolvers/containerResolver";
+
 import BeacukaiApi from "./beacukaiApi";
 
 import config from "./config";
 
 export default async function listen(port: number): Promise<string> {
   const schema = await buildFederatedSchema({
-    resolvers: [Cargo],
-    orphanedTypes: [Cargo],
+    resolvers: [ContainerResolver],
+    orphanedTypes: [mContainer],
     container: Container
   });
 

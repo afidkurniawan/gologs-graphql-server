@@ -1,7 +1,7 @@
 import { RESTDataSource } from "apollo-datasource-rest";
 import { Service } from "typedi";
 
-import Cargo from "./models/Cargo";
+import Container from "./models/Container";
 import config from "./config";
 
 @Service()
@@ -11,7 +11,10 @@ export default class BeacukaiApi extends RESTDataSource {
     super.baseURL = config.services.beacukai.apiUrl;
   }
 
-  async getCargo(blNumber: string, blDate: string): Promise<Cargo> {
-    return super.get(`kontainerbc20All/${blNumber}/${blDate}`);
+  async getContainer(blNumber: string, blDate: string): Promise<Container[]> {
+    const result = await super.get(`
+    ${config.services.beacukai.pathPerfix}/${blNumber}/${blDate}`);
+    const key = Object.keys(result)[0];
+    return result[key];
   }
 }

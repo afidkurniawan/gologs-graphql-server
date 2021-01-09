@@ -2,7 +2,9 @@ import { config } from "dotenv";
 
 config();
 const port = process.env.PORT;
+const beacukaiUrl = process.env.BEACUKAI_API_URL;
 const beacukaiPort = process.env.BEACUKAI_PORT;
+const beacukaiPathPerfix = process.env.BEACUKAI_PATH_PERFIX;
 
 export default {
   app: {
@@ -12,10 +14,11 @@ export default {
   },
 
   services: {
-    beacukai:{
-        name: "beacukai",
-        apiUrl: process.env.BEACUKAI_API_URL,
-        port: (beacukaiPort as unknown) as number,
-      }
+    beacukai: {
+      name: "beacukai",
+      apiUrl: beacukaiUrl,
+      pathPerfix: beacukaiPathPerfix,
+      port: (beacukaiPort as unknown) as number
+    }
   }
 };
