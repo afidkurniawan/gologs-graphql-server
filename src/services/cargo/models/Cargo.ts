@@ -1,18 +1,17 @@
 import { Field, ID, ObjectType } from "type-graphql";
 
+import GContainer from "./GContainer";
+
 @ObjectType()
 export default class Cargo {
   @Field(() => ID)
-  id: number;
+  blNumber: string;
 
   @Field({ nullable: true })
   billOfLanding?: Document;
 
   @Field({ nullable: true })
   blDate?: Date;
-
-  @Field({ nullable: true })
-  blNumber?: string;
 
   @Field({ nullable: true })
   consigneeName?: string;
@@ -28,4 +27,7 @@ export default class Cargo {
 
   @Field({ nullable: true })
   voyageNumber: string;
+
+  @Field(() => GContainer, { nullable: true })
+  gContainer?: GContainer;
 }
