@@ -1,9 +1,7 @@
-/* eslint-disable camelcase */
-/* naming convention disable, caused by external service */
 import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
-export default class Container {
+export default class ExtBcContainer {
   @Field({ nullable: true })
   // eslint-disable-next-line @typescript-eslint/naming-convention
   container_size?: string;

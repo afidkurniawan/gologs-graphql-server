@@ -1,7 +1,7 @@
 import { RESTDataSource } from "apollo-datasource-rest";
 import { Service } from "typedi";
 
-import Container from "./models/Bc_Container";
+import Container from "./models/Container";
 import config from "./config";
 
 @Service()

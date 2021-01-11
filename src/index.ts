@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server";
 import { ApolloGateway, GatewayConfig } from "@apollo/gateway";
 
 import customersService from "./services/customers";
-import beacukaiService from "./services/beacukai";
+import beacukaiService from "./services/external/beacukai";
 
 import config from "./config";
 
