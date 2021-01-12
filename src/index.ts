@@ -4,6 +4,7 @@ import { ApolloGateway, GatewayConfig } from "@apollo/gateway";
 
 import customersService from "./services/customers";
 import beacukaiService from "./services/beacukai";
+import cargoService from "./services/cargo";
 
 import config from "./config";
 
@@ -18,6 +19,10 @@ async function main() {
       {
         name: "beacukai",
         url: await beacukaiService(config.services.beacukai.port)
+      },
+      {
+        name: "cargo",
+        url: await cargoService(config.services.cargo.port)
       }
     ]
   };

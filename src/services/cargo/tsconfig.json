@@ -1,0 +1,9 @@
+{
+    "extends": "../../../tsconfig-base.json",
+    "compilerOptions": {
+      "outDir": "../../dist/services/cargo",
+      "rootDir": "."
+    },
+    "references": [{ "path": "../../helpers" }]
+  }
+  

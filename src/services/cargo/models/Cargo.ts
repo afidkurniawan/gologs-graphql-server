@@ -8,7 +8,7 @@ export default class Cargo {
   blNumber: string;
 
   @Field({ nullable: true })
-  billOfLanding?: Document;
+  billOfLanding?: string;
 
   @Field({ nullable: true })
   blDate?: Date;
@@ -17,7 +17,7 @@ export default class Cargo {
   consigneeName?: string;
 
   @Field({ nullable: true })
-  letterOfIndemnity?: Document;
+  letterOfIndemnity?: string;
 
   @Field({ nullable: true })
   shipName: string;
