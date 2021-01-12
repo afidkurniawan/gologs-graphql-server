@@ -5,7 +5,7 @@ import buildFederatedSchema from "../../helpers/buildFederatedSchema";
 import Cargo from "./models/Cargo";
 import CargoResolver from "./resolvers/cargoResolver";
 
-import CargoApi from "./cargo";
+import CargoApi from "./cargoApi";
 
 import config from "./config";
 

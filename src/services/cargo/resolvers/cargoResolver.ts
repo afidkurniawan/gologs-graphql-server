@@ -1,6 +1,6 @@
 import { Arg, ID, Query, Resolver } from "type-graphql";
 import { Service } from "typedi";
-import CargoApi from "../cargo";
+import CargoApi from "../cargoApi";
 import Cargo from "../models/Cargo";
 
 @Service()
