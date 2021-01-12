@@ -1,21 +1,18 @@
-/* eslint-disable camelcase */
-/* naming convention disable, caused by external service */
-
 import { ApolloServer } from "apollo-server";
 import { Container } from "typedi";
 
-import buildFederatedSchema from "../../helpers/buildFederatedSchema";
-import Bc_Container from "./models/Bc_Container";
+import buildFederatedSchema from "../../../helpers/buildFederatedSchema";
+import BcContainer from "./models/Container";
 import ContainerResolver from "./resolvers/containerResolver";
 
-import BeacukaiApi from "./beacukai";
+import BeacukaiApi from "./beacukaiApi";
 
 import config from "./config";
 
 export default async function listen(port: number): Promise<string> {
   const schema = await buildFederatedSchema({
     resolvers: [ContainerResolver],
-    orphanedTypes: [Bc_Container],
+    orphanedTypes: [BcContainer],
     container: Container
   });
 

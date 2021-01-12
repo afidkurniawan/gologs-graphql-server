@@ -1,9 +1,8 @@
 {
-    "extends": "../../../tsconfig-base.json",
+    "extends": "../../../../tsconfig-base.json",
     "compilerOptions": {
       "outDir": "../../dist/services/beacukai",
       "rootDir": "."
     },
-    "references": [{ "path": "../../helpers" }]
+    "references": [{ "path": "../../../helpers"}]
   }
-  
