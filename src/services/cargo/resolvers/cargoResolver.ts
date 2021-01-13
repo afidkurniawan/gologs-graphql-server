@@ -13,8 +13,6 @@ export default class CargoResolver {
     @Arg("blNumber", () => ID) blNumber: string,
     @Arg("blDate") blDate: string
   ): Promise<Cargo> {
-    const x = await this.cargoApi.getCargo(blNumber, blDate);
-    console.log(x);
     return this.cargoApi.getCargo(blNumber, blDate);
   }
 }

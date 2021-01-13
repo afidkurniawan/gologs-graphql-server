@@ -28,6 +28,6 @@ export default class Cargo {
   @Field({ nullable: true })
   voyageNumber: string;
 
-  @Field(() => Container, { nullable: true })
-  container?: Container;
+  @Field(() => [Container], { nullable: true })
+  containers?: [Container];
 }
