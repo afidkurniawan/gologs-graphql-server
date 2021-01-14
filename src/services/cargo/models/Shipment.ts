@@ -20,14 +20,14 @@ export default class Shipment {
   letterOfIndemnity?: string;
 
   @Field({ nullable: true })
-  shipName: string;
+  shipName?: string;
 
   @Field({ nullable: true })
-  shipperName?: number;
+  shipperName?: string;
 
   @Field({ nullable: true })
-  voyageNumber: string;
+  voyageNumber?: string;
 
-  @Field(() => [Container], { nullable: true })
-  containers?: [Container];
+  @Field(() => [Container])
+  containers: [Container];
 }

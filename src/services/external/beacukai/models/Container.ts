@@ -1,22 +1,23 @@
+/* eslint-disable camelcase */
 import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
 export default class ExtBcContainer {
-  @Field({ nullable: true })
+  @Field()
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  container_size?: string;
+  container_size: string;
 
   @Field({ nullable: true })
   // eslint-disable-next-line @typescript-eslint/naming-convention
   pelabuhan_bongkar?: string;
 
-  @Field({ nullable: true })
+  @Field()
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  bl_no?: string;
+  bl_no: string;
 
-  @Field({ nullable: true })
+  @Field()
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  seriContainer?: string;
+  seriContainer: string;
 
   @Field({ nullable: true })
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -50,9 +51,9 @@ export default class ExtBcContainer {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   pelabuhan_muat?: string;
 
-  @Field({ nullable: true })
+  @Field()
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  bl_date?: string;
+  bl_date: string;
 
   @Field({ nullable: true })
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -62,9 +63,9 @@ export default class ExtBcContainer {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   no_voyage?: string;
 
-  @Field({ nullable: true })
+  @Field()
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  container_no?: string;
+  container_no: string;
 
   @Field({ nullable: true })
   // eslint-disable-next-line @typescript-eslint/naming-convention
