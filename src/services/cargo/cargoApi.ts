@@ -5,7 +5,7 @@ import { RESTDataSource } from "apollo-datasource-rest";
 
 import { Service } from "typedi";
 
-import Cargo from "./models/Cargo";
+import Cargo from "./models/Shipment";
 import config from "./config";
 
 @Service()

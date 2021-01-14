@@ -2,7 +2,7 @@ import { ApolloServer } from "apollo-server";
 import { Container } from "typedi";
 
 import buildFederatedSchema from "../../helpers/buildFederatedSchema";
-import Cargo from "./models/Cargo";
+import Cargo from "./models/Shipment";
 import CargoResolver from "./resolvers/cargoResolver";
 
 import CargoApi from "./cargoApi";

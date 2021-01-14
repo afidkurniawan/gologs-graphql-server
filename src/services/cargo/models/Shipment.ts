@@ -3,7 +3,7 @@ import { Field, ID, ObjectType } from "type-graphql";
 import Container from "./Container";
 
 @ObjectType()
-export default class Cargo {
+export default class Shipment {
   @Field(() => ID)
   blNumber: string;
 
