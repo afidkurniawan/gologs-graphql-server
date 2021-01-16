@@ -2,7 +2,7 @@ import { ApolloServer } from "apollo-server";
 import { Container } from "typedi";
 
 import buildFederatedSchema from "../../helpers/buildFederatedSchema";
-import Cargo from "./models/Shipment";
+import Shipment from "./models/Shipment";
 import CargoResolver from "./resolvers/cargoResolver";
 
 import CargoApi from "./cargoApi";
@@ -12,7 +12,7 @@ import config from "./config";
 export default async function listen(port: number): Promise<string> {
   const schema = await buildFederatedSchema({
     resolvers: [CargoResolver],
-    orphanedTypes: [Cargo],
+    orphanedTypes: [Shipment],
     container: Container
   });
 

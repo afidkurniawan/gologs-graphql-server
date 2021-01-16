@@ -1,18 +1,18 @@
 import { Arg, ID, Query, Resolver } from "type-graphql";
 import { Service } from "typedi";
 import CargoApi from "../cargoApi";
-import Cargo from "../models/Shipment";
+import Shipment from "../models/Shipment";
 
 @Service()
-@Resolver(Cargo)
+@Resolver(Shipment)
 export default class CargoResolver {
   constructor(private cargoApi: CargoApi) {}
 
-  @Query(() => Cargo)
+  @Query(() => Shipment)
   async cargo(
     @Arg("blNumber", () => ID) blNumber: string,
     @Arg("blDate") blDate: string
-  ): Promise<Cargo> {
+  ): Promise<Shipment> {
     return this.cargoApi.getCargo(blNumber, blDate);
   }
 }
